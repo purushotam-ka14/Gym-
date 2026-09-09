@@ -3668,27 +3668,13 @@ async function startServer() {
      STATIC FRONTEND
      ============================================================ */
 
-  const staticPath = path.resolve(
-  __dirname,
-  "../dist/public",
-);
+  const staticPath = path.resolve(__dirname);
 
-  app.use(
-    express.static(
-      staticPath,
-    ),
-  );
+  app.use(express.static(staticPath));
 
-  app.get(
-    "*",
-    (_req, res) =>
-      res.sendFile(
-        path.join(
-          staticPath,
-          "index.html",
-        ),
-      ),
-  );
+  app.get("*", (_req, res) => {
+    res.sendFile(path.join(staticPath, "index.html"));
+  });
 
   /* ============================================================
      START SERVER
@@ -3719,4 +3705,3 @@ startServer().catch(
     process.exit(1);
   },
 );
-
