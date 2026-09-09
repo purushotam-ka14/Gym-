@@ -6156,3 +6156,465 @@ textarea {
     }
   }
 }
+/* =========================================================
+   PULSEFORGE — FINAL PHONE FIX
+   ---------------------------------------------------------
+   Existing design/code above is preserved.
+   These rules only correct the phone layout.
+   Desktop/laptop styles are not changed.
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  /* =======================================================
+     PHONE HEADER — SHOW LOGIN
+     The original mobile rule hides .nav-login.
+     This restores it without changing desktop navigation.
+     ======================================================= */
+
+  .site-shell .top-nav {
+    width: 100% !important;
+    min-height: 64px !important;
+    height: 64px !important;
+    padding: 10px 14px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+    box-sizing: border-box !important;
+  }
+
+  .site-shell .brand {
+    flex: 0 0 auto !important;
+    font-size: 15px !important;
+    white-space: nowrap !important;
+  }
+
+  .site-shell .nav-links {
+    display: none !important;
+  }
+
+  .site-shell .nav-actions {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    flex: 0 0 auto !important;
+    margin-left: auto !important;
+    gap: 6px !important;
+  }
+
+  /*
+     FIX:
+     The original CSS has:
+       .nav-login { display: none; }
+
+     Login is now visible on phones.
+  */
+  .site-shell .nav-login {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 38px !important;
+    padding: 8px 9px !important;
+    margin: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    color: #edf1e6 !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+  }
+
+  .site-shell .nav-login:hover {
+    color: var(--lime) !important;
+  }
+
+  .site-shell .nav-actions .button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 38px !important;
+    padding: 8px 10px !important;
+    font-size: 10px !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+  }
+
+
+  /* =======================================================
+     PHONE HERO
+     Keeps the existing gym design but prevents the
+     decorative information cards from sitting on top of
+     the "Gym information." heading.
+     ======================================================= */
+
+  .site-shell .hero-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 650px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    padding: 58px 16px 30px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .site-shell .hero-copy {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    text-align: center !important;
+    z-index: 5 !important;
+  }
+
+  .site-shell .hero-copy .eyebrow-pulse {
+    justify-content: center !important;
+    margin-bottom: 17px !important;
+  }
+
+  .site-shell .hero-copy h1 {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    font-size: clamp(52px, 16vw, 76px) !important;
+    line-height: .89 !important;
+    letter-spacing: -.075em !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+  }
+
+  .site-shell .hero-lede {
+    width: 100% !important;
+    max-width: 390px !important;
+    margin: 24px auto 27px !important;
+    font-size: 13px !important;
+    line-height: 1.65 !important;
+  }
+
+  .site-shell .hero-buttons {
+    width: 100% !important;
+    max-width: 330px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+  }
+
+  .site-shell .hero-buttons .button,
+  .site-shell .hero-buttons .text-link {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .site-shell .hero-proof {
+    justify-content: center !important;
+    margin-top: 28px !important;
+    flex-direction: column !important;
+  }
+
+  /*
+     Put the gym scene below the hero text.
+     It remains part of the existing design.
+  */
+  .site-shell .hero-section .gym-scene {
+    width: 100% !important;
+    min-height: 310px !important;
+    height: 310px !important;
+    margin: 20px 0 0 !important;
+    transform: none !important;
+    overflow: hidden !important;
+  }
+
+  .site-shell .gym-scene-caption {
+    top: 3% !important;
+    right: 3% !important;
+    font-size: 8px !important;
+  }
+
+  /*
+     Decorative hero cards stay inside the gym image area,
+     not over the main heading.
+  */
+  .site-shell .gym-signal {
+    max-width: 48vw !important;
+    padding: 7px 9px 7px 7px !important;
+    gap: 5px !important;
+    font-size: 8px !important;
+    line-height: 1.1 !important;
+    background: rgba(4, 8, 10, .88) !important;
+    backdrop-filter: blur(7px) !important;
+    -webkit-backdrop-filter: blur(7px) !important;
+  }
+
+  .site-shell .gym-signal b {
+    font-size: 9px !important;
+  }
+
+  .site-shell .signal-checkin {
+    top: 34% !important;
+    left: 0 !important;
+  }
+
+  .site-shell .signal-streak {
+    top: 8% !important;
+    right: 0 !important;
+  }
+
+  .site-shell .signal-alert {
+    top: 63% !important;
+    right: 0 !important;
+  }
+
+
+  /* =======================================================
+     ATTENDANCE SECTION — PHONE
+     One card per row, tighter spacing, darker photo,
+     readable text and no overflow.
+     ======================================================= */
+
+  .site-shell .attendance-layout-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 64px 16px 78px !important;
+    overflow: hidden !important;
+  }
+
+  /*
+     Stronger mobile dark overlay.
+     This affects only the attendance background image.
+  */
+  .site-shell .attendance-layout-section::before {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(3, 5, 7, .94) 0%,
+        rgba(3, 5, 7, .90) 35%,
+        rgba(3, 5, 7, .92) 70%,
+        rgba(3, 5, 7, .97) 100%
+      ) !important;
+  }
+
+  .site-shell .attendance-layout-section .section-background-image {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: fill !important;
+    object-position: center center !important;
+    opacity: .72 !important;
+  }
+
+  .site-shell .attendance-layout-section .section-intro {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    margin-bottom: 30px !important;
+  }
+
+  .site-shell .attendance-layout-section .section-intro h2 {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    font-size: clamp(39px, 12vw, 52px) !important;
+    line-height: .94 !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+  }
+
+  .site-shell .attendance-layout-section .intro-aside {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .site-shell .attendance-layout-section .intro-aside p {
+    max-width: 100% !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  /*
+     IMPORTANT:
+     Exactly one attendance card per row.
+  */
+  .site-shell .attendance-layout-section .signal-grid {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 12px !important;
+    align-items: stretch !important;
+  }
+
+  .site-shell .attendance-layout-section .signal-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 20px 18px !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    border-radius: 6px !important;
+    background: rgba(5, 9, 13, .94) !important;
+    border-color: rgba(255, 255, 255, .18) !important;
+    box-shadow:
+      0 14px 32px rgba(0, 0, 0, .42),
+      inset 0 1px 0 rgba(255, 255, 255, .045) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+  }
+
+  /*
+     Keep the three attendance cards visually distinct
+     while making each card dark enough for the photo.
+  */
+  .site-shell .attendance-layout-section .signal-lime {
+    background:
+      linear-gradient(
+        145deg,
+        rgba(20, 184, 166, .10),
+        rgba(5, 9, 13, .95) 62%
+      ) !important;
+  }
+
+  .site-shell .attendance-layout-section .signal-coral {
+    background:
+      linear-gradient(
+        145deg,
+        rgba(244, 63, 94, .08),
+        rgba(5, 9, 13, .95) 62%
+      ) !important;
+  }
+
+  .site-shell .attendance-layout-section .signal-violet {
+    background:
+      linear-gradient(
+        145deg,
+        rgba(99, 102, 241, .09),
+        rgba(5, 9, 13, .95) 62%
+      ) !important;
+  }
+
+  .site-shell .attendance-layout-section .signal-topline {
+    min-width: 0 !important;
+  }
+
+  .site-shell .attendance-layout-section .signal-icon {
+    width: 34px !important;
+    height: 34px !important;
+    flex: 0 0 34px !important;
+  }
+
+  .site-shell .attendance-layout-section .signal-tag {
+    max-width: 65% !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    font-size: 8px !important;
+  }
+
+  .site-shell .attendance-layout-section .signal-card .eyebrow {
+    margin-top: 22px !important;
+    margin-bottom: 9px !important;
+    font-size: 8px !important;
+  }
+
+  .site-shell .attendance-layout-section .signal-card h3 {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    font-size: 23px !important;
+    line-height: 1.02 !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+  }
+
+  .site-shell .attendance-layout-section .signal-copy {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 12px 0 0 !important;
+    font-size: 11px !important;
+    line-height: 1.55 !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  .site-shell .attendance-layout-section .signal-arrow {
+    position: static !important;
+    display: inline-flex !important;
+    margin-top: 15px !important;
+  }
+
+  /*
+     Do not lift attendance cards on touch screens.
+     This prevents the stacked cards from visually colliding.
+  */
+  .site-shell .attendance-layout-section .signal-card:hover {
+    transform: none !important;
+  }
+
+
+  /* =======================================================
+     SMALL PHONE — 320px to 380px
+     ======================================================= */
+
+  @media (max-width: 380px) {
+
+    .site-shell .top-nav {
+      padding-left: 11px !important;
+      padding-right: 11px !important;
+    }
+
+    .site-shell .brand {
+      font-size: 14px !important;
+    }
+
+    .site-shell .nav-actions {
+      gap: 3px !important;
+    }
+
+    .site-shell .nav-login {
+      padding-left: 6px !important;
+      padding-right: 6px !important;
+      font-size: 11px !important;
+    }
+
+    .site-shell .nav-actions .button {
+      padding-left: 8px !important;
+      padding-right: 8px !important;
+      font-size: 9px !important;
+    }
+
+    .site-shell .hero-section {
+      padding-left: 13px !important;
+      padding-right: 13px !important;
+    }
+
+    .site-shell .hero-copy h1 {
+      font-size: clamp(48px, 16.5vw, 64px) !important;
+    }
+
+    .site-shell .hero-lede {
+      font-size: 12px !important;
+    }
+
+    .site-shell .attendance-layout-section {
+      padding-left: 13px !important;
+      padding-right: 13px !important;
+    }
+
+    .site-shell .attendance-layout-section .signal-card {
+      padding: 18px 15px !important;
+    }
+
+    .site-shell .attendance-layout-section .signal-card h3 {
+      font-size: 21px !important;
+    }
+
+    .site-shell .attendance-layout-section .signal-copy {
+      font-size: 10px !important;
+    }
+  }
+}
+
+/* =========================================================
+   END OF PHONE FIX
+   ========================================================= */
