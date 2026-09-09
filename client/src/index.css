@@ -5334,3 +5334,825 @@ body:has(.site-shell) {
     animation: none;
   }
 }
+
+
+/* =========================================================
+   FINAL RESPONSIVE PATCH — LAPTOP / TABLET / PHONE
+   Keeps existing design and prevents horizontal overflow.
+   ========================================================= */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  max-width: 100%;
+}
+
+.site-shell,
+.admin-shell {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* ---------- LAPTOP ---------- */
+@media (min-width: 981px) and (max-width: 1280px) {
+  .top-nav,
+  .section-block,
+  .site-footer {
+    width: calc(100% - 56px);
+  }
+
+  .hero-section {
+    width: 100%;
+    padding-left: 42px;
+    padding-right: 42px;
+    gap: 18px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(58px, 7.2vw, 88px);
+  }
+
+  .orbit-scene {
+    transform: scale(.92);
+    transform-origin: center;
+  }
+
+  .section-intro h2,
+  .data-copy h2,
+  .retention-heading h2,
+  .red-list-header h2 {
+    font-size: clamp(44px, 5vw, 68px);
+  }
+
+  .data-section {
+    gap: 42px;
+  }
+
+  .plans-section,
+  .booking-section {
+    width: calc(100% - 56px);
+  }
+
+  .admin-content {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .admin-topbar {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+/* ---------- TABLET ---------- */
+@media (max-width: 980px) {
+  body {
+    min-width: 320px;
+  }
+
+  .top-nav {
+    width: calc(100% - 40px);
+  }
+
+  .hero-section {
+    width: calc(100% - 40px);
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .hero-copy {
+    width: 100%;
+  }
+
+  .hero-copy h1 {
+    max-width: 100%;
+  }
+
+  .hero-lede {
+    max-width: 600px;
+  }
+
+  .orbit-scene,
+  .gym-scene {
+    width: 100%;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .signal-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .section-intro,
+  .plans-heading,
+  .booking-heading,
+  .retention-heading {
+    grid-template-columns: 1fr;
+  }
+
+  .section-intro > *,
+  .plans-heading > *,
+  .booking-heading > *,
+  .retention-heading > * {
+    min-width: 0;
+  }
+
+  .privacy-section {
+    grid-template-columns: 120px minmax(0, 1fr);
+  }
+
+  .privacy-facts {
+    grid-column: 2;
+  }
+
+  .product-frame {
+    width: 100%;
+    max-width: 100%;
+    transform: none;
+  }
+
+  .product-frame:hover {
+    transform: translateY(-4px);
+  }
+
+  /* Admin */
+  .admin-shell {
+    min-width: 0;
+  }
+
+  .admin-sidebar {
+    flex: 0 0 72px;
+    width: 72px;
+  }
+
+  .admin-content,
+  .admin-topbar {
+    min-width: 0;
+  }
+
+  .admin-dashboard-grid,
+  .follow-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-kpi-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .admin-table {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* ---------- PHONE ---------- */
+@media (max-width: 640px) {
+  * {
+    min-width: 0;
+  }
+
+  body {
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .site-shell {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+  }
+
+  .top-nav,
+  .hero-section,
+  .section-block,
+  .site-footer,
+  .plans-section,
+  .booking-section {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .top-nav {
+    min-height: 64px;
+    height: auto;
+    padding: 12px 16px;
+  }
+
+  .brand {
+    font-size: 15px;
+  }
+
+  .nav-actions {
+    gap: 7px;
+  }
+
+  .nav-actions .button {
+    min-height: 40px;
+    padding: 9px 11px;
+  }
+
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    padding: 58px 16px 25px;
+  }
+
+  .hero-copy {
+    text-align: center;
+  }
+
+  .hero-copy h1 {
+    width: 100%;
+    font-size: clamp(45px, 15.5vw, 76px);
+    line-height: .9;
+    overflow-wrap: anywhere;
+  }
+
+  .hero-lede {
+    width: 100%;
+    margin: 22px auto 28px;
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .hero-buttons {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .hero-buttons .button,
+  .hero-buttons .text-link {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-proof {
+    margin-top: 30px;
+    flex-direction: column;
+  }
+
+  .orbit-scene {
+    width: 100%;
+    min-height: 330px;
+    transform: scale(.72);
+    transform-origin: top center;
+    margin-bottom: -90px;
+  }
+
+  .gym-scene {
+    width: 100%;
+    min-height: 320px;
+    transform: scale(.72);
+    transform-origin: top center;
+    margin-bottom: -90px;
+  }
+
+  .orbit-ring,
+  .orbit-node,
+  .gym-signal {
+    max-width: 48vw;
+  }
+
+  .ticker {
+    width: 100%;
+    padding: 12px 14px;
+    gap: 10px 18px;
+  }
+
+  .section-block {
+    padding: 70px 16px;
+  }
+
+  .section-intro,
+  .retention-heading {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .section-intro h2,
+  .data-copy h2,
+  .retention-heading h2,
+  .red-list-header h2,
+  .privacy-section h2,
+  .plans-heading h2,
+  .booking-heading h2 {
+    width: 100%;
+    font-size: clamp(40px, 12vw, 54px);
+    overflow-wrap: anywhere;
+  }
+
+  .signal-grid,
+  .plans-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .signal-card {
+    width: 100%;
+    min-height: 250px;
+  }
+
+  .data-section {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-top: 60px;
+  }
+
+  .product-frame {
+    width: 100%;
+    min-height: 0;
+    border-radius: 7px;
+  }
+
+  .dashboard-preview {
+    width: 100%;
+    padding: 18px 12px 22px;
+  }
+
+  .preview-tabs {
+    overflow-x: auto;
+    gap: 15px;
+    padding: 0 12px;
+    scrollbar-width: none;
+  }
+
+  .preview-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .preview-kpis {
+    grid-template-columns: 1fr;
+  }
+
+  .preview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mini-ring {
+    display: none;
+  }
+
+  .member-preview {
+    padding: 24px 14px;
+  }
+
+  .streak-card {
+    padding: 15px;
+  }
+
+  .streak-card b {
+    font-size: 32px;
+  }
+
+  .loop-rail {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .loop-step {
+    display: grid;
+    grid-template-columns: 28px 48px minmax(0, 1fr);
+    column-gap: 9px;
+    min-height: 100px;
+  }
+
+  .loop-step p {
+    max-width: none;
+  }
+
+  .loop-connector {
+    margin-left: 52px;
+  }
+
+  .red-list-section {
+    padding-top: 60px;
+    padding-bottom: 75px;
+  }
+
+  .member-list {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .member-row {
+    grid-template-columns: 30px minmax(0, 1fr) auto;
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .member-meta,
+  .member-detail {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .privacy-section {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 65px 16px;
+  }
+
+  .privacy-facts {
+    grid-column: 1;
+    grid-template-columns: 1fr;
+  }
+
+  .cta-section {
+    width: 100%;
+    min-height: 450px;
+    padding: 45px 16px;
+  }
+
+  .cta-content {
+    width: 100%;
+  }
+
+  .cta-content h2 {
+    font-size: clamp(48px, 15vw, 68px);
+    overflow-wrap: anywhere;
+  }
+
+  .access-form {
+    width: 100%;
+    max-width: 390px;
+  }
+
+  .access-form input {
+    min-width: 0;
+  }
+
+  .site-footer {
+    grid-template-columns: 1fr;
+    padding: 30px 16px;
+  }
+
+  .footer-links,
+  .footer-meta {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Booking */
+  .booking-section,
+  .plans-section {
+    padding: 75px 16px 85px;
+  }
+
+  .booking-heading {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .booking-fields {
+    grid-template-columns: 1fr;
+    padding: 20px 14px;
+  }
+
+  .booking-submit {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .booking-tabs {
+    overflow-x: auto;
+    padding-left: 14px;
+    padding-right: 14px;
+    scrollbar-width: none;
+  }
+
+  .booking-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Login / register */
+  .login-overlay {
+    padding: 10px;
+  }
+
+  .login-modal {
+    width: 100%;
+    max-width: 100%;
+    max-height: calc(100dvh - 20px);
+    padding: 26px 16px;
+    border-radius: 14px;
+  }
+
+  .login-modal h2 {
+    font-size: clamp(25px, 8vw, 32px);
+  }
+
+  .login-choice {
+    min-height: 82px;
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .login-choice-title {
+    font-size: 14px;
+  }
+
+  .login-form input {
+    min-height: 46px;
+  }
+
+  /* ---------- ADMIN PHONE ---------- */
+  .admin-shell {
+    display: block;
+    width: 100%;
+    min-height: 100dvh;
+    overflow-x: hidden;
+  }
+
+  .admin-sidebar {
+    width: 100%;
+    height: auto;
+    padding: 12px 10px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+  }
+
+  .admin-logo {
+    justify-content: flex-start;
+    padding: 0 4px 8px;
+  }
+
+  .admin-workspace {
+    margin: 12px 4px;
+  }
+
+  .admin-nav {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    gap: 6px;
+    overflow-x: auto;
+    padding: 2px 0 6px;
+    scrollbar-width: none;
+  }
+
+  .admin-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .admin-nav a {
+    flex: 0 0 auto;
+    min-height: 40px;
+    padding: 0 12px;
+    border-radius: 5px;
+    white-space: nowrap;
+  }
+
+  .admin-nav a.active {
+    border-left: 0;
+    border-bottom: 2px solid var(--lime);
+    padding-left: 12px;
+  }
+
+  .admin-side-footer {
+    display: none;
+  }
+
+  .admin-main {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .admin-topbar {
+    width: 100%;
+    min-height: 62px;
+    height: auto;
+    padding: 11px 13px;
+    gap: 8px;
+  }
+
+  .admin-topbar h1 {
+    font-size: 19px;
+  }
+
+  .admin-top-actions {
+    gap: 6px;
+  }
+
+  .admin-content {
+    width: 100%;
+    max-width: 100%;
+    padding: 18px 12px 35px;
+    overflow-x: hidden;
+  }
+
+  .admin-kpi-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7px;
+  }
+
+  .admin-kpi {
+    min-width: 0;
+    min-height: 98px;
+    padding: 12px;
+  }
+
+  .admin-kpi strong {
+    font-size: 24px;
+  }
+
+  .admin-dashboard-grid,
+  .follow-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-panel {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .admin-panel-head {
+    padding: 16px 13px 0;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .admin-chart {
+    min-width: 0;
+    padding: 18px 12px 0;
+  }
+
+  .chart-body {
+    min-width: 0;
+  }
+
+  .chart-bars-admin {
+    gap: 2px;
+  }
+
+  .chart-legend {
+    flex-wrap: wrap;
+    padding: 0 12px 16px;
+    gap: 10px;
+  }
+
+  .follow-grid {
+    padding: 18px 13px;
+  }
+
+  .table-tools {
+    flex-wrap: wrap;
+    padding: 14px;
+  }
+
+  .search-box {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
+  .admin-table {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .table-row {
+    min-width: 620px;
+  }
+
+  .admin-notice {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 14px;
+  }
+}
+
+/* ---------- VERY SMALL PHONES ---------- */
+@media (max-width: 380px) {
+  .hero-section {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(42px, 14.5vw, 58px);
+  }
+
+  .orbit-scene,
+  .gym-scene {
+    transform: scale(.62);
+    margin-bottom: -115px;
+  }
+
+  .signal-card {
+    padding: 20px 18px;
+  }
+
+  .section-block,
+  .booking-section,
+  .plans-section {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .admin-content {
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+
+  .admin-kpi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-kpi strong {
+    font-size: 27px;
+  }
+
+  .queue-health {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .login-modal {
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+}
+
+/* ---------- LANDSCAPE PHONES ---------- */
+@media (max-width: 900px) and (orientation: landscape) {
+  .hero-section {
+    padding-top: 35px;
+  }
+
+  .orbit-scene,
+  .gym-scene {
+    min-height: 300px;
+    transform: scale(.72);
+    margin-bottom: -80px;
+  }
+
+  .login-modal {
+    max-height: calc(100dvh - 16px);
+  }
+}
+
+/* ---------- TOUCH DEVICES ---------- */
+@media (hover: none) and (pointer: coarse) {
+  .button:hover,
+  .signal-card:hover,
+  .product-frame:hover,
+  .row-action:hover,
+  .plan-card:hover {
+    transform: none;
+  }
+
+  button,
+  a,
+  select,
+  input {
+    touch-action: manipulation;
+  }
+
+  .button,
+  .login-submit,
+  .checkin-button,
+  .booking-submit {
+    min-height: 44px;
+  }
+}
+
+/* ---------- SAFE AREA FOR MODERN PHONES ---------- */
+@supports (padding: max(0px)) {
+  @media (max-width: 640px) {
+    .top-nav {
+      padding-left: max(16px, env(safe-area-inset-left));
+      padding-right: max(16px, env(safe-area-inset-right));
+    }
+
+    .site-footer {
+      padding-bottom: max(30px, env(safe-area-inset-bottom));
+    }
+  }
+}
