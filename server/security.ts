@@ -42,7 +42,7 @@ export function securityHeaders(
   );
   res.setHeader(
     "Permissions-Policy",
-    "camera=(), microphone=(), geolocation=()",
+    "camera=(self), microphone=(), geolocation=()",
   );
 
   // HSTS is sent only when the request is already HTTPS in production.
