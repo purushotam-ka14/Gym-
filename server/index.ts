@@ -3668,11 +3668,10 @@ async function startServer() {
      STATIC FRONTEND
      ============================================================ */
 
-  const staticPath =
-    path.resolve(
-      __dirname,
-      "public",
-    );
+  const staticPath = path.resolve(
+  __dirname,
+  "../dist/public",
+);
 
   app.use(
     express.static(
