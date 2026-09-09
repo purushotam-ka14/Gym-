@@ -4619,3 +4619,718 @@ body:has(.site-shell) {
   margin-top: 3px;
   color: #7f8885;
 }
+/* =========================================================
+   PULSEFORGE MOBILE SUPPORT
+   ADDED ONLY — DESKTOP CODE ABOVE IS UNCHANGED
+   ========================================================= */
+
+@media (max-width: 700px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    min-width: 320px;
+  }
+
+  .site-shell {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  /* ---------- MAIN NAVIGATION ---------- */
+  .top-nav {
+    width: 100%;
+    min-height: 64px;
+    height: auto;
+    padding: 12px 16px;
+    gap: 12px;
+  }
+
+  .brand {
+    flex: 0 0 auto;
+    font-size: 15px;
+  }
+
+  .nav-actions {
+    margin-left: auto;
+    gap: 8px;
+  }
+
+  .nav-actions .button {
+    min-height: 38px;
+    padding: 9px 12px;
+    white-space: nowrap;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero-section {
+    width: 100%;
+    max-width: 100%;
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 68px 20px 30px;
+  }
+
+  .hero-copy {
+    width: 100%;
+    min-width: 0;
+    text-align: center;
+  }
+
+  .hero-copy h1 {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(48px, 17vw, 78px);
+    line-height: .9;
+    overflow-wrap: anywhere;
+  }
+
+  .hero-lede {
+    width: 100%;
+    max-width: 420px;
+    margin: 24px auto 28px;
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .hero-buttons {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .hero-buttons .button,
+  .hero-buttons .text-link {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-proof {
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+
+  .gym-scene {
+    width: 100%;
+    max-width: 100%;
+    min-height: 330px;
+    transform: none;
+    margin: 0;
+  }
+
+  .gym-scene .gym-signal {
+    max-width: 145px;
+  }
+
+  .gym-signal {
+    font-size: 8px;
+  }
+
+  .signal-checkin {
+    left: 0;
+  }
+
+  .signal-streak {
+    right: 0;
+  }
+
+  .signal-alert {
+    right: 0;
+  }
+
+  .gym-treadmill {
+    right: -25px;
+    transform: rotateX(52deg) rotateZ(8deg) scale(.8);
+    transform-origin: right bottom;
+  }
+
+  /* ---------- TICKER ---------- */
+  .ticker {
+    width: 100%;
+    min-height: 48px;
+    padding: 11px 16px;
+    gap: 10px 18px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* ---------- GENERAL SECTIONS ---------- */
+  .section-block {
+    width: 100%;
+    max-width: 100%;
+    padding: 72px 20px;
+  }
+
+  .section-intro {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 36px;
+  }
+
+  .section-intro h2,
+  .data-copy h2,
+  .retention-heading h2,
+  .red-list-header h2,
+  .privacy-section h2 {
+    max-width: 100%;
+    font-size: clamp(38px, 12vw, 52px);
+    line-height: .94;
+  }
+
+  .intro-aside {
+    width: 100%;
+  }
+
+  .intro-aside p {
+    max-width: none;
+  }
+
+  .signal-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .signal-card {
+    width: 100%;
+    min-height: 250px;
+  }
+
+  /* ---------- DATA / MEMBER PREVIEW ---------- */
+  .data-section {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-top: 55px;
+  }
+
+  .data-copy {
+    width: 100%;
+  }
+
+  .data-copy > p:not(.eyebrow) {
+    max-width: 100%;
+  }
+
+  .data-points {
+    width: 100%;
+  }
+
+  .product-frame {
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    transform: none;
+    overflow: hidden;
+  }
+
+  .browser-chrome {
+    width: 100%;
+  }
+
+  .preview-tabs {
+    width: 100%;
+    overflow-x: auto;
+    justify-content: flex-start;
+    gap: 14px;
+    padding: 0 14px;
+    scrollbar-width: none;
+  }
+
+  .preview-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .preview-tabs button {
+    flex: 0 0 auto;
+  }
+
+  .dashboard-preview {
+    width: 100%;
+    padding: 18px 12px 22px;
+  }
+
+  .preview-kpis {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 5px;
+  }
+
+  .preview-kpis > div {
+    min-width: 0;
+    padding: 9px 6px;
+  }
+
+  .preview-kpis b {
+    font-size: clamp(16px, 6vw, 21px);
+  }
+
+  .preview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mini-ring {
+    display: none;
+  }
+
+  .member-preview {
+    width: 100%;
+    min-height: 0;
+    padding: 26px 16px;
+  }
+
+  .member-welcome {
+    width: 100%;
+  }
+
+  .member-welcome h3 {
+    font-size: 23px;
+  }
+
+  .streak-card {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .streak-card b {
+    font-size: 34px;
+  }
+
+  .member-status {
+    width: 100%;
+  }
+
+  .checkin-button,
+  .checkout-button {
+    width: 100%;
+    min-height: 44px;
+  }
+
+  .preview-logout {
+    right: 16px;
+  }
+
+  /* ---------- QR SCANNER ---------- */
+  .scan-overlay {
+    inset: 64px 12px 52px;
+    width: auto;
+    max-width: none;
+    border-radius: 6px;
+  }
+
+  .scan-corners {
+    width: min(190px, 62vw);
+    height: min(190px, 62vw);
+  }
+
+  .scan-corners i {
+    width: 28px;
+    height: 28px;
+  }
+
+  .scan-corners span {
+    top: 3px;
+  }
+
+  /* ---------- RETENTION ---------- */
+  .retention-section {
+    padding-top: 60px;
+  }
+
+  .retention-heading {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 22px;
+    margin-bottom: 38px;
+  }
+
+  .retention-heading > p {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .loop-rail {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .loop-step {
+    display: grid;
+    grid-template-columns: 30px 52px minmax(0, 1fr);
+    align-items: center;
+    column-gap: 10px;
+    min-height: 100px;
+  }
+
+  .loop-step .step-no {
+    grid-row: span 2;
+    align-self: start;
+    padding-top: 16px;
+  }
+
+  .loop-icon {
+    grid-column: 2;
+    grid-row: span 2;
+    margin: 0;
+  }
+
+  .loop-step b {
+    grid-column: 3;
+    min-width: 0;
+  }
+
+  .loop-step p {
+    grid-column: 3;
+    max-width: none;
+    margin-top: 5px;
+  }
+
+  .loop-connector {
+    width: 1px;
+    height: 28px;
+    margin: 0 0 0 55px;
+  }
+
+  /* ---------- MEMBER LIST ---------- */
+  .red-list-section {
+    padding-top: 60px;
+    padding-bottom: 85px;
+  }
+
+  .red-list-header {
+    align-items: flex-start;
+    gap: 22px;
+    flex-direction: column;
+  }
+
+  .queue-health {
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .queue-health b {
+    font-size: 30px;
+  }
+
+  .member-list {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .member-row {
+    grid-template-columns: 32px minmax(0, 1fr) auto;
+    gap: 8px;
+    padding: 13px 0;
+  }
+
+  .member-meta {
+    min-width: 0;
+  }
+
+  .member-meta b,
+  .member-meta span,
+  .member-detail {
+    overflow-wrap: anywhere;
+  }
+
+  .member-detail {
+    grid-column: 2;
+    font-size: 10px;
+  }
+
+  .row-action {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    padding: 9px;
+  }
+
+  .row-menu {
+    display: none;
+  }
+
+  /* ---------- PRIVACY ---------- */
+  .privacy-section {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 65px 20px;
+  }
+
+  .privacy-stamp {
+    width: 96px;
+    height: 96px;
+  }
+
+  .privacy-facts {
+    grid-column: 1;
+    grid-template-columns: 1fr;
+  }
+
+  /* ---------- CTA ---------- */
+  .cta-section {
+    width: 100%;
+    min-height: 460px;
+    padding: 45px 18px;
+  }
+
+  .cta-content {
+    width: 100%;
+  }
+
+  .cta-content h2 {
+    font-size: clamp(48px, 16vw, 70px);
+  }
+
+  .cta-content > p {
+    max-width: 100%;
+    font-size: 13px;
+  }
+
+  .access-form {
+    width: 100%;
+    max-width: 390px;
+  }
+
+  /* ---------- FOOTER ---------- */
+  .site-footer {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .footer-links {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-meta {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* =====================================================
+     ADMIN MOBILE
+     ===================================================== */
+
+  .admin-shell {
+    width: 100%;
+    min-height: 100vh;
+    display: block;
+    overflow-x: hidden;
+  }
+
+  .admin-sidebar {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    height: auto;
+    min-height: 0;
+    padding: 16px 12px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+  }
+
+  .admin-logo {
+    padding: 0 6px;
+  }
+
+  .admin-workspace {
+    margin: 20px 6px 16px;
+  }
+
+  .admin-nav {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+    overflow-x: auto;
+    padding-bottom: 5px;
+    scrollbar-width: none;
+  }
+
+  .admin-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .admin-nav a {
+    flex: 0 0 auto;
+    min-height: 38px;
+    padding: 0 11px;
+    white-space: nowrap;
+    border-radius: 4px;
+  }
+
+  .admin-nav a.active {
+    border-left: 0;
+    border-bottom: 2px solid var(--lime);
+    padding-left: 11px;
+  }
+
+  .nav-spacer {
+    margin-top: 0;
+  }
+
+  .admin-side-footer {
+    margin-top: 16px;
+    padding: 14px 6px 0;
+  }
+
+  .admin-main {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .admin-topbar {
+    width: 100%;
+    min-height: 64px;
+    height: auto;
+    padding: 12px 14px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .admin-content {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px 14px 35px;
+    overflow-x: hidden;
+  }
+
+  .admin-kpi-grid {
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .admin-dashboard-grid {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .admin-panel {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .admin-table-wrap,
+  .table-wrap,
+  .admin-table-container {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .admin-table {
+    min-width: 650px;
+  }
+
+  .admin-panel-header {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .admin-form-grid,
+  .member-password-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-form-grid > *,
+  .member-password-grid > * {
+    min-width: 0;
+  }
+
+  .admin-actions,
+  .admin-toolbar {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .admin-actions button,
+  .admin-toolbar button {
+    min-height: 40px;
+  }
+
+  /* Keep dialogs inside the phone viewport */
+  .modal-overlay,
+  .dialog-overlay {
+    padding: 12px;
+  }
+
+  .modal,
+  .dialog,
+  .modal-content,
+  .dialog-content {
+    width: 100%;
+    max-width: 100%;
+    max-height: calc(100vh - 24px);
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .section-block {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(44px, 16vw, 62px);
+  }
+
+  .preview-kpis {
+    grid-template-columns: 1fr;
+  }
+
+  .preview-kpis > div {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+
+  .preview-kpis span {
+    width: auto;
+  }
+
+  .preview-kpis small {
+    margin-left: 0;
+  }
+
+  .admin-kpi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .queue-health {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gym-treadmill,
+  .gym-signal {
+    animation: none;
+  }
+}
