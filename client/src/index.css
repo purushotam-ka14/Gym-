@@ -6423,3 +6423,109 @@ textarea {
     overflow-x: hidden !important;
   }
 }
+
+/* =========================================================
+   PULSEFORGE — MOBILE FIX PATCH #2
+   Paste this at the very BOTTOM of index.css, AFTER the
+   "FINAL MOBILE CLEANUP" block from before.
+   Nothing existing is edited — this only overrides 3 things
+   that earlier mobile rules had accidentally hidden/squeezed.
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  /* -----------------------------------------------------
+     1) ADMIN LOGOUT BUTTON WAS HIDDEN ON MOBILE
+     (an earlier rule set .admin-side-footer { display:none })
+     Bring it back as a clear, tappable row at the bottom
+     of the mobile sidebar/nav area.
+     ----------------------------------------------------- */
+  .admin-side-footer {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    width: 100% !important;
+    margin-top: 14px !important;
+    padding: 14px 12px !important;
+    border-top: 1px solid rgba(255,255,255,.1) !important;
+  }
+
+  .admin-side-footer button {
+    width: 100% !important;
+    min-height: 46px !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    border: 1px solid rgba(255,118,94,.35) !important;
+    border-radius: 8px !important;
+    background: rgba(255,118,94,.08) !important;
+    color: var(--coral) !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+  }
+}
+
+@media (max-width: 640px) {
+
+  /* -----------------------------------------------------
+     2) "SIGN IN" BUTTON WAS HIDDEN ON MOBILE
+     (an earlier rule set .nav-login { display:none })
+     Show it again, sized to fit next to the logo.
+     ----------------------------------------------------- */
+  .nav-login {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    padding: 9px 12px !important;
+    border: 1px solid rgba(200,255,61,.35) !important;
+    border-radius: 7px !important;
+    background: rgba(200,255,61,.08) !important;
+    color: var(--lime) !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    white-space: nowrap !important;
+  }
+
+  .top-nav {
+    justify-content: space-between !important;
+  }
+
+  .nav-actions {
+    flex: 0 0 auto !important;
+  }
+
+  /* -----------------------------------------------------
+     3) GYM HOURS ROWS WRAPPED WORD-BY-WORD
+     The day/time row is a 2-column inline grid that gets
+     too narrow on phone. Stack day and time instead of
+     splitting them side by side, so it reads clearly.
+     ----------------------------------------------------- */
+  div[style*="minmax(82px"] {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 4px !important;
+    padding-bottom: 12px !important;
+    margin-bottom: 4px !important;
+  }
+
+  div[style*="minmax(82px"] strong {
+    font-size: 14px !important;
+  }
+
+  div[style*="minmax(82px"] span {
+    display: block !important;
+    white-space: normal !important;
+    line-height: 1.6 !important;
+    font-size: 13px !important;
+    color: #c7cdcf !important;
+  }
+
+  /* The "Gym location" / "Gym hours" cards sit side-by-side
+     in a 2-column grid — force them to stack full width so
+     each card (and the hours inside it) has room to breathe. */
+  #access div[style*="repeat(2, minmax(0, 1fr))"] {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+}
+
