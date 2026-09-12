@@ -6529,3 +6529,46 @@ textarea {
   }
 }
 
+
+
+/* =========================================================
+   PULSEFORGE — PROFESSIONAL MOBILE SIGN OUT BUTTON
+   ADD-ONLY OVERRIDE
+   Existing CSS/design is not changed or removed.
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .admin-side-footer button {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    min-height: 48px !important;
+    padding: 11px 14px !important;
+    gap: 9px !important;
+
+    border: 1px solid rgba(255, 118, 94, 0.38) !important;
+    border-radius: 10px !important;
+    background: rgba(255, 118, 94, 0.07) !important;
+
+    color: var(--coral) !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.2px !important;
+
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18) !important;
+    transition: background 0.2s ease, border-color 0.2s ease,
+                transform 0.2s ease, box-shadow 0.2s ease !important;
+  }
+
+  .admin-side-footer button:hover {
+    background: rgba(255, 118, 94, 0.12) !important;
+    border-color: rgba(255, 118, 94, 0.58) !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.24) !important;
+  }
+
+  .admin-side-footer button:active {
+    transform: translateY(1px) !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18) !important;
+  }
+}
