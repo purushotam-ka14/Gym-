@@ -6572,3 +6572,78 @@ textarea {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18) !important;
   }
 }
+
+
+/* =========================================================
+   PULSEFORGE — FINAL MOBILE SIGN OUT BUTTON FIX
+   ADD-ONLY OVERRIDE
+   Existing layout, sidebar and dashboard design are untouched.
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .admin-side-footer button {
+    width: 70px !important;
+    min-width: 70px !important;
+    max-width: 70px !important;
+    min-height: 42px !important;
+    height: 42px !important;
+
+    display: inline-flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    gap: 5px !important;
+    padding: 7px 4px !important;
+    margin-left: -5px !important;
+
+    border: 1px solid rgba(255, 118, 94, 0.45) !important;
+    border-radius: 9px !important;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 118, 94, 0.13),
+      rgba(255, 118, 94, 0.045)
+    ) !important;
+
+    color: var(--coral) !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    letter-spacing: 0 !important;
+    white-space: nowrap !important;
+
+    box-shadow:
+      0 5px 16px rgba(0, 0, 0, 0.22),
+      inset 0 1px 0 rgba(255, 255, 255, 0.06) !important;
+
+    transition:
+      background 0.18s ease,
+      border-color 0.18s ease,
+      box-shadow 0.18s ease,
+      transform 0.18s ease !important;
+  }
+
+  .admin-side-footer button svg {
+    width: 15px !important;
+    height: 15px !important;
+    flex: 0 0 15px !important;
+  }
+
+  .admin-side-footer button:hover {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 118, 94, 0.2),
+      rgba(255, 118, 94, 0.07)
+    ) !important;
+    border-color: rgba(255, 118, 94, 0.7) !important;
+    box-shadow:
+      0 7px 20px rgba(0, 0, 0, 0.28),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+    transform: translateY(-1px) !important;
+  }
+
+  .admin-side-footer button:active {
+    transform: translateY(0) scale(0.97) !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2) !important;
+  }
+}
